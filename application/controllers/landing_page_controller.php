@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); error_reporting(E_STRICT);
 
 class Landing_Page_Controller extends CI_Controller {
 
@@ -8,7 +8,8 @@ class Landing_Page_Controller extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('landing_page');
+		$this->mongo_model->connectToDB();
+		//$this->load->view('landing_page');
 	}
 }
 
